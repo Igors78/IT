@@ -6,7 +6,7 @@
 /*   By: ioleinik <ioleinik@students.42wolfsburg.de +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 19:37:26 by ioleinik          #+#    #+#             */
-/*   Updated: 2023/01/17 23:39:55 by ioleinik         ###   ########.fr       */
+/*   Updated: 2023/01/18 00:33:55 by ioleinik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ int main(void)
 	int res;
 
 	__asm__(
-		"   movl    %[myd1], %[myres]\n"
-		"   imull   %[myd2], %[myres]\n"
+		"   mov   %[myd1], %[myres]\n"
+		"   imul  %[myd2], %[myres]\n"
 		: [myres] "=&r"(res)
 		: [myd1] "r"(d1), [myd2] "r"(d2));
 
